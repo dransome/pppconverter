@@ -13,6 +13,11 @@ Note: Works on python3.4 and above.
         virtualenv -p python3 env
         source env/bin/activate
         pip install -r requirements.txt
+        
+**OR**
+
+If deploying on Jelastic, just edit the server's `wsgi.conf` to point `WSGIDaemonProcess` `home="/var/www/webroot/ROOT"` and Jelastic will take care of the rest.
+        
 
 3. Create the sqlite database by running the website.py file.
 
