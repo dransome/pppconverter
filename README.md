@@ -6,7 +6,7 @@ Note: Works on python3.4 and above.
 ### Installation Instructions
 1. Clone the source code
 
-        git clone https://github.com/nigelbabu/pppconverter.git
+        git clone https://github.com/dransome/pppconverter.git
 
 2. Create a virtual environments and install the dependencies
 
@@ -16,15 +16,23 @@ Note: Works on python3.4 and above.
 
 3. Create the sqlite database by running the website.py file.
 
-        ./manage.py runserver
+        ./manage.py db_init
 
 4. Import the CSV into the sqlite database.
 
         ./manage.py importcsv -f data.csv
 
-5. Run the site.
+5. Import countries CSV into the sqlite database
 
-        ./manage.py runserver
+        ./manage.py importcountries -f countries.csv
+        
+6. Define Open Exchange Rates API key in `instance/local.py`
+
+        OPEN_EXCHANGE = 'write the APP ID here'
+        
+7. Update FX rates       
+
+        ./manage.py update_conversion_rate
 
 
 ### Updating the data
@@ -39,8 +47,6 @@ Note: Works on python3.4 and above.
 5. Import the new CSV into the sqlite database.
 
         ./manage.py importcsv -f data.csv
-
-6. PROFITT!!
 
 
 
