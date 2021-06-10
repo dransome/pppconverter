@@ -59,7 +59,7 @@ If deploying on Jelastic, just edit the server's `wsgi.conf` to point `WSGIDaemo
 
         ./manage.py importcsv -f data.csv
 
-**If this step fails due to UNIQUE constraint failed***
+**If this step fails due to UNIQUE constraint failed**
 
 You may need to rename the sqlite db file and repeat the setup steps using your new data file.
 
